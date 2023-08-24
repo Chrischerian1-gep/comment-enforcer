@@ -3,7 +3,7 @@ const github = require('@actions/github');
 
 async function eventHandler() {
     try {
-        const commentsMustContain = core.getInput('comments-must-contain').toLocaleLowerCase();
+        const minCommentLength = parseInt(core.getInput('min-comment-length'));
         const payload = JSON.stringify(github.context.payload, undefined, 2)
         const octokit = github.getOctokit(process.env.GITHUB_TOKEN);
         const owner = github.context.issue.owner;
@@ -16,12 +16,12 @@ async function eventHandler() {
         };
         const response = await octokit.request("GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews", data);
 
-        const hasMessageAboutSecurityReview = (response.data || [])
-            .map(review => (review.body || "").toLocaleLowerCase().includes(commentsMustContain))
+        const hasMessageWithMinLength = (response.data || [])
+            .map(review => (review.body || "").length >= minCommentLength)
             .reduce((a, b) => a || b, false);
 
-        if(hasMessageAboutSecurityReview === false) {
-            core.setFailed(`Message ${commentsMustContain} wasn't mentioned in Pull Request Review Comments`);
+        if (!hasMessageWithMinLength) {
+            core.setFailed(`No comments with a minimum length of ${minCommentLength} characters found in Pull Request Review Comments`);
         }
     } catch (error) {
         core.setFailed(error.message);

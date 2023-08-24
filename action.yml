@@ -1,4 +1,4 @@
-name: "Check Pull Request Review Comments"
+name: "Check Pull Request Reviewer comment length"
 description: "Check that PR comment has minimum length."
 branding:
   icon: message-square

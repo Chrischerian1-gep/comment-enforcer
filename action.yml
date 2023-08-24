@@ -5,7 +5,7 @@ branding:
   color: purple
 
 inputs:
-  comments-must-contain:
+  min-comment-length:
     description: "This text must appear in a pull request review comments. Ignore cases"
     required: true
     default: ""

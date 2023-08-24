@@ -1,22 +1,22 @@
 {
   "name": "check-pr-review-comments-action",
   "version": "1.0.0",
-  "description": "This action helps to enforce some conventions in pull requests comments. It can check that comments do include some piece of text.",
+  "description": "This action helps to enforce some conventions in pull requests comments. It can check that comments have a minimum length.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com:ArtemGorev/check-pull-request-review-comments.git"
+    "url": "git+https://github.com:Chrischerian1-gep/comment-enforcer.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com:ArtemGorev/check-pull-request-review-comments/issues"
+    "url": "https://github.com:Chrischerian1-gep/comment-enforcer/issues"
   },
-  "homepage": "https://github.com:ArtemGorev/check-pull-request-review-comments#readme",
+  "homepage": "https://github.com:Chrischerian1-gep/comment-enforcer#readme",
   "dependencies": {
     "@actions/core": "^1.6.0",
     "@actions/github": "^5.0.0"

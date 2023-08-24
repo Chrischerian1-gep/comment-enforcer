@@ -1,5 +1,5 @@
-name: "Check Pull Request Rewiew Comments"
-description: "Check that PR comment contains a given text."
+name: "Check Pull Request Review Comments"
+description: "Check that PR comment has minimum length."
 branding:
   icon: message-square
   color: purple

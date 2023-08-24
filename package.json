@@ -1,0 +1,24 @@
+{
+  "name": "check-pr-review-comments-action",
+  "version": "1.0.0",
+  "description": "This action helps to enforce some conventions in pull requests comments. It can check that comments do include some piece of text.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:ArtemGorev/check-pull-request-review-comments.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com:ArtemGorev/check-pull-request-review-comments/issues"
+  },
+  "homepage": "https://github.com:ArtemGorev/check-pull-request-review-comments#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0"
+  }
+}

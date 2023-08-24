@@ -1,0 +1,15 @@
+name: "Check Pull Request Rewiew Comments"
+description: "Check that PR comment contains a given text."
+branding:
+  icon: message-square
+  color: purple
+
+inputs:
+  comments-must-contain:
+    description: "This text must appear in a pull request review comments. Ignore cases"
+    required: true
+    default: ""
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

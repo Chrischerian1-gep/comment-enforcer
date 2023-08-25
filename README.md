@@ -16,8 +16,8 @@ None.
 ## Example usage
 
     - name: Check Pull Request comments
-      uses: actions/check-pr-review-comments@v0
+      uses: actions/comment-enforcer/@v1.1.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Required to to act on pull request through GitHub API 
       with:
-        comments-must-contain: 'Security Review'
+        min-comment-length: 10
